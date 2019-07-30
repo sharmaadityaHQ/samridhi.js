@@ -18,10 +18,10 @@ You are free to use my library in your code.
 
 
 
+:heart:  
 
 
 
-
-                            Made with :heart: by Aditya        
+                            Made by Aditya        
 
 
