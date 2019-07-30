@@ -10,7 +10,9 @@ You are free to use my library in your code.
 &nbsp;&nbsp;&nbsp;In a browser:  
 ```javascript
 <script src="_.js"></script>
-```                  
+```  
+## Testing
+Tests are written in the ```test``` folder. To run tests for a particular function in the library run eg. ```$ node test/chunk.js``` for the ```chunk``` method from the terminal after ```$ cd samridhi.js```.
 
 
 
