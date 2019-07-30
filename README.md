@@ -21,6 +21,5 @@ You are free to use my library in your code.
 
 
 
-                            Made with :heart: by Aditya        
 
 
