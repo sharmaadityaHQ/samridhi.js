@@ -95,11 +95,11 @@ const _ = {
   },
 
   reverse(array, size) {
-    let rev_array = [];
+    let revArray = [];
     for (let i = size; i >= 0; i--) {
-      rev_array.push(array[i]);
+      revArray.push(array[i]);
     }
-    return rev_array;
+    return revArray;
   }
 
 };
