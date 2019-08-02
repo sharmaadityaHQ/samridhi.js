@@ -100,9 +100,19 @@ const _ = {
       revArray.push(array[i]);
     }
     return revArray;
+  },
+
+  snakeCase(string) {
+    let regexVar = /\w+(?=.)\w/gi;
+    return string.match(regexVar).join("_").toLowerCase();
+  },
+
+  isRegExp(string) {
+    let regexVar = /^\/.+\//;
+    return regexVar.test(string);
   }
 
-};
-
+}; 
+   
 // Do not write or modify code below this line
 module.exports = _;
