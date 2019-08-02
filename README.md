@@ -11,6 +11,10 @@ You are free to use my library in your code.
 ```javascript
 <script src="_.js"></script>
 ```  
+&nbsp;&nbsp;&nbsp;In Node.js:  
+```javascript  
+var _ = require('./_.js');  
+```
 ## Testing
 Tests are written in the ```test``` folder. To run tests for a particular function in the library run eg. ```$ node test/chunk.js``` for the ```chunk``` method from the terminal after ```$ cd samridhi.js```.
 
