@@ -110,9 +110,36 @@ const _ = {
   isRegExp(string) {
     let regexVar = /^\/.+\//;
     return regexVar.test(string);
+  },
+
+  isPalindrome(string) {
+
+    let length = string.length;
+
+    let mid = Math.floor(length / 2);
+    let cnt = 0;
+    let arr = [];
+
+    for (let i = 0; i < mid; i++) {
+      arr.push("(\\w)");
+      cnt++;
+    }
+
+    if (length % 2 != 0) {
+      arr.push(".");
+    }
+
+    for (let i = cnt; i >= 1; i--) {
+      arr.push("\\" + i);
+    }
+
+    let regexVar = RegExp(arr.join(""), "gi");
+    // console.log(regexVar);
+    return regexVar.test(string);
+
   }
 
-}; 
-   
+};
+
 // Do not write or modify code below this line
 module.exports = _;
