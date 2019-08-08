@@ -100,6 +100,43 @@ const _ = {
       revArray.push(array[i]);
     }
     return revArray;
+  },
+
+  snakeCase(string) {
+    let regexVar = /\w+(?=.)\w/gi;
+    return string.match(regexVar).join("_").toLowerCase();
+  },
+
+  isRegExp(string) {
+    let regexVar = /^\/.+\//;
+    return regexVar.test(string);
+  },
+
+  isPalindrome(string) {
+
+    let length = string.length;
+
+    let mid = Math.floor(length / 2);
+    let cnt = 0;
+    let arr = [];
+
+    for (let i = 0; i < mid; i++) {
+      arr.push("(\\w)");
+      cnt++;
+    }
+
+    if (length % 2 != 0) {
+      arr.push(".");
+    }
+
+    for (let i = cnt; i >= 1; i--) {
+      arr.push("\\" + i);
+    }
+
+    let regexVar = RegExp(arr.join(""), "gi");
+    // console.log(regexVar);
+    return regexVar.test(string);
+
   }
 
 };
