@@ -111,6 +111,10 @@ const _ = {
       return true;
     }
     return false;
+  },
+
+  everyNth(array, nth) {
+    return array.filter((e, i) => i % nth === nth - 1);
   }
 };
 
