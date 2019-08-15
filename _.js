@@ -104,8 +104,14 @@ const _ = {
 
   stringReverse(string) {
     return string.split('').reverse().join('');
-  }
+  },
 
+  isPalindrome(string) {
+    if(string === this.stringReverse(string)) {
+      return true;
+    }
+    return false;
+  }
 };
 
 // Do not write or modify code below this line
