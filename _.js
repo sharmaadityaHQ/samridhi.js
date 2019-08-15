@@ -94,12 +94,16 @@ const _ = {
     return arrayChunks;
   },
 
-  reverse(array, size) {
+  arrayReverse(array, size) {
     let revArray = [];
     for (let i = size; i >= 0; i--) {
       revArray.push(array[i]);
     }
     return revArray;
+  },
+
+  stringReverse(string) {
+    return string.split('').reverse().join('');
   }
 
 };
