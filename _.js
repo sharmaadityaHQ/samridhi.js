@@ -126,7 +126,14 @@ const _ = {
       acc[filter[i] ? 0 : 1].push(v);
       return acc;
     },[[], []]);
-  }
+  },
+
+  capAllElements(arr) {
+    arr.forEach((el, index, array) => {
+     array[index] = el.toUpperCase();
+   });
+   return arr;
+ }
 };
 
 // Do not write or modify code below this line
