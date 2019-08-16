@@ -115,6 +115,10 @@ const _ = {
 
   everyNth(array, nth) {
     return array.filter((e, i) => i % nth === nth - 1);
+  },
+
+  filterFalsy(array) {
+    return array.filter(Boolean);
   }
 };
 
