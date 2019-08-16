@@ -119,6 +119,13 @@ const _ = {
 
   filterFalsy(array) {
     return array.filter(Boolean);
+  },
+
+  bifurcate(array, filter) {
+    return array.reduce((acc, v, i) => {
+      acc[filter[i] ? 0 : 1].push(v);
+      return acc;
+    },[[], []]);
   }
 };
 
