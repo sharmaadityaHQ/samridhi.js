@@ -134,7 +134,11 @@ const _ = {
 
  union(array1, array2) {
    return Array.from(new Set([...array1, ...array2]));
- }
+ },
+
+ reject(predicate, array) {
+  return array.filter((e) => !predicate(e));
+}
 };
 
 // Do not write or modify code below this line
