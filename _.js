@@ -130,6 +130,10 @@ const _ = {
  intersection(array1, array2) {
    const s = new Set(array2);
    return array1.filter(x => s.has(x));
+ },
+
+ union(array1, array2) {
+   return Array.from(new Set([...array1, ...array2]));
  }
 };
 
