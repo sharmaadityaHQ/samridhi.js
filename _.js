@@ -125,6 +125,11 @@ const _ = {
      array[index] = el.toUpperCase();
    });
    return arr;
+ },
+
+ intersection(array1, array2) {
+   const s = new Set(array2);
+   return array1.filter(x => s.has(x));
  }
 };
 
