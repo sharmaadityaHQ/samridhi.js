@@ -142,6 +142,10 @@ const _ = {
 
 sample(array) {
   return array[Math.floor(Math.random() * array.length)];
+},
+
+unique(array) {
+  return [...new Set(array)];
 }
 };
 
