@@ -138,6 +138,10 @@ const _ = {
 
  reject(predicate, array) {
   return array.filter((e) => !predicate(e));
+},
+
+sample(array) {
+  return array[Math.floor(Math.random() * array.length)];
 }
 };
 
