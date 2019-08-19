@@ -146,6 +146,10 @@ sample(array) {
 
 unique(array) {
   return [...new Set(array)];
+},
+
+none(array, predicate = Boolean) {
+  return !array.some(predicate);
 }
 };
 
