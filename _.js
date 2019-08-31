@@ -156,7 +156,7 @@ readFileLines(filename) {
   const fs = require('fs');
   return fs
             .readFileSync(filename)
-            .toString('UTF-8')
+            .toString('UTF8')
             .split('\n');
 }
 };
