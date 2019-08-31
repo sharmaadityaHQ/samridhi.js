@@ -150,6 +150,14 @@ unique(array) {
 
 none(array, predicate = Boolean) {
   return !array.some(predicate);
+},
+
+readFileLines(filename) {
+  const fs = require('fs');
+  return fs
+            .readFileSync(filename)
+            .toString('UTF-8')
+            .split('\n');
 }
 };
 
