@@ -158,6 +158,10 @@ readFileLines(filename) {
             .readFileSync(filename)
             .toString('UTF8')
             .split('\n');
+},
+
+move(array, offset) {
+  return [...array.slice(offset), ...array.slice(0,offset)];
 }
 };
 
