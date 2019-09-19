@@ -162,6 +162,10 @@ readFileLines(filename) {
 
 move(array, offset) {
   return [...array.slice(offset), ...array.slice(0,offset)];
+},
+
+isObjectLike(param) {
+  return param !== null && typeof param === 'object';
 }
 };
 
