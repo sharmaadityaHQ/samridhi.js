@@ -166,6 +166,47 @@ move(array, offset) {
 
 isObjectLike(param) {
   return param !== null && typeof param === 'object';
+},
+
+// a set of ready to use filters designed to use with array.filter()
+/* inBetween usage
+let array = [1, 2, 3, 4, 5, 6, 7];
+console.log(array.filter(inBetween(3, 6)));
+// 3,4,5,6
+*/
+inBetween(a, b) {
+  return function(element) {
+    return element >= a && element <= b;
+  };
+},
+
+/* inArray usage
+let array = [1, 2, 3, 4, 5, 6, 7];
+console.log(array.filter(inArray([1, 2, 10])) );
+// 1,2
+*/
+inArray(array) {
+  return function(element) {
+    return array.includes(element);
+  };
+},
+
+//helper function to sort by field
+/* byField usage
+let users = [
+  { name: "John", age: 20, surname: "Johnson" },
+  { name: "Pete", age: 18, surname: "Peterson" },
+  { name: "Ann", age: 19, surname: "Hathaway" }
+];
+users.sort(byField('name'));
+users.forEach(user => console.log(user.name));
+// Ann, John, Pete
+users.sort(byField('age'));
+users.forEach(user => console.log(user.name));
+// Pete, Ann, Joh
+*/
+byField(field) {
+  return (a, b) => a[field] > b[field] ? 1 : -1;    //uses comparefunction concept in array.sort()
 }
 };
 
