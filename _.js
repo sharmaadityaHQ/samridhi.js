@@ -207,6 +207,32 @@ users.forEach(user => console.log(user.name));
 */
 byField(field) {
   return (a, b) => a[field] > b[field] ? 1 : -1;    //uses comparefunction concept in array.sort()
+},
+
+//this is a function that will take another function as argument and convert it into a curried function
+/*
+Usage is as follows:
+function abc(a, b, c) {
+  return a + b + c;
+}
+var curriedAbc = curry(abc);
+console.log(curriedAbc(1)(2)(3));  //6
+*/
+
+curry(fx) {
+  let arity = fx.length;          //arity of a function is the number of arguments or operands that the function takes
+  return function f1() {
+    let args = Array.prototype.slice.call(arguments, 0);
+    if(args.length >= arity) {
+      return fx.apply(null, args);
+    }
+    else{
+      return function f2() {
+        let args2 = Array.prototype.slice.call(arguments, 0);
+        return f1.apply(null, args.concat(args2));
+      };
+    }
+  };
 }
 };
 
